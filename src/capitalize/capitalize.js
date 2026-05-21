@@ -1,5 +1,5 @@
-function capitalize() {
-  return "A";
+function capitalize(word) {
+  return word.toUpperCase();
 }
 
 export default capitalize;
