@@ -1,5 +1,5 @@
 function capitalize() {
-  return 1;
+  return "A";
 }
 
 export default capitalize;
