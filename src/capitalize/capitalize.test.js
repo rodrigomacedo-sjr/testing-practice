@@ -1,5 +1,5 @@
 import capitalize from "./capitalize.js";
 
-it("Test", () => {
-  expect(capitalize()).toBe(1);
+it("A single letter is capitalized", () => {
+  expect(capitalize("a")).toBe("A");
 });
