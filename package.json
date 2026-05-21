@@ -1,0 +1,28 @@
+{
+  "name": "testing-practice",
+  "version": "1.0.0",
+  "description": "TOP exercise to practice TDD with Jest",
+  "keywords": [
+    "TDD",
+    "Jest"
+  ],
+  "homepage": "https://github.com/rodrigomacedo-sjr/testing-practice#readme",
+  "bugs": {
+    "url": "https://github.com/rodrigomacedo-sjr/testing-practice/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigomacedo-sjr/testing-practice.git"
+  },
+  "license": "ISC",
+  "author": "Rodrigo Macedo Silva Junior",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.29.5",
+    "jest": "^30.4.2"
+  }
+}
