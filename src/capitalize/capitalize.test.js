@@ -17,8 +17,13 @@ it("Non alpha characters are unchanged", () => {
   expect(capitalize(";")).toBe(";");
   expect(capitalize("0")).toBe("0");
   expect(capitalize("1")).toBe("1");
+  expect(capitalize(" ")).toBe(" ");
 });
 
 it("Empty string", () => {
   expect(capitalize("")).toBe("");
 });
+
+it("Big string starting with uppercase", () => {
+  expect(capitalize("Big string")).toBe("Big string");
+})
