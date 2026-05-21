@@ -10,4 +10,11 @@ it("A single uppercase letter is unchanged", () => {
   expect(capitalize("A")).toBe("A");
   expect(capitalize("B")).toBe("B");
   expect(capitalize("C")).toBe("C");
-})
+});
+
+it("Non alpha characters are unchanged", () => {
+  expect(capitalize("%")).toBe("%");
+  expect(capitalize(";")).toBe(";");
+  expect(capitalize("0")).toBe("0");
+  expect(capitalize("1")).toBe("1");
+});
