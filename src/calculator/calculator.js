@@ -7,7 +7,11 @@ const calculator = (() => {
   };
 
   const divide = (a, b) => {
-    a / b;
+    if (typeof a != "number" || typeof b != "number") {
+      return "NaN";
+    }
+
+    return a / b;
   };
   const multiply = () => { };
 

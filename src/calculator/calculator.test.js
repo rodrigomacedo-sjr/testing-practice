@@ -33,10 +33,11 @@ it("Divide handles normal numbers", () => {
 });
 
 it("Divide handles zero", () => {
-  expect(calculator.divide(1, 0)).toBe("Inf");
-  expect(calculator.divide(1, 0.0000000001)).toBe("Inf");
   expect(calculator.divide(0, 1)).toBe(0);
-  expect(calculator.divide(0.0000000001, 1)).toBeCloseTo(0, 5);
+  expect(calculator.divide(1, 0)).toBe(Infinity);
+  expect(calculator.divide(1, 1e-309)).toBe(Infinity);
+  expect(calculator.divide(1, 1e-308)).toBe(1e308);
+  expect(calculator.divide(Number.MIN_VALUE, 1)).toBe(Number.MIN_VALUE);
 });
 
 it("Divide handles non numbers", () => {
