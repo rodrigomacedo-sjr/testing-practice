@@ -24,3 +24,11 @@ it("Subtract doesn't work for non numbers", () => {
   expect(calculator.subtract(() => { }, 1)).toBe("NaN");
   expect(calculator.subtract({ value: 2 }, 1)).toBe("NaN");
 });
+
+it("Divide works for numbers", () => {
+
+  expect(calculator.divide(1, 2)).toBeCloseTo(0.5, 5);
+  expect(calculator.divide(2, 1)).toBe(2);
+  expect(calculator.divide(1, 10000000000)).toBeCloseTo(0, 5);
+  expect(calculator.divide(1.23, 4.56)).toBeCloseTo(0.2697368421, 5);
+})
