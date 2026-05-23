@@ -26,9 +26,17 @@ it("Subtract doesn't work for non numbers", () => {
 });
 
 it("Divide works for numbers", () => {
-
   expect(calculator.divide(1, 2)).toBeCloseTo(0.5, 5);
   expect(calculator.divide(2, 1)).toBe(2);
   expect(calculator.divide(1, 10000000000)).toBeCloseTo(0, 5);
   expect(calculator.divide(1.23, 4.56)).toBeCloseTo(0.2697368421, 5);
-})
+});
+
+it("Divide handles zero", () => {
+  expect(calculator.divide(1, 0)).toBe("Inf");
+  expect(calculator.divide(1, 0.0000000001)).toBe("Inf");
+  expect(calculator.divide(0, 1)).toBe(0);
+  expect(calculator.divide(0.0000000001, 1)).toBeCloseTo(0, 5);
+});
+
+it("D");

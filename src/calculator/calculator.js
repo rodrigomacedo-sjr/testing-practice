@@ -6,7 +6,9 @@ const calculator = (() => {
     return a - b;
   };
 
-  const divide = (a, b) => a / b;
+  const divide = (a, b) => {
+    a / b;
+  };
   const multiply = () => { };
 
   return {
