@@ -29,7 +29,7 @@ object == {
 
 ## TODO
 
-- [ ] capitalize function
+- [x] capitalize function
 - [ ] reverse string function
 - [ ] calculator object
 - [ ] caesar cipher
