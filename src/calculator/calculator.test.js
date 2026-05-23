@@ -16,4 +16,11 @@ it("Subtract works for numbers", () => {
   expect(calculator.subtract(10000000000, 1)).toBe(9999999999);
   expect(calculator.subtract(1, 10000000000)).toBe(-9999999999);
   expect(calculator.subtract(1.23, 4.56)).toBeCloseTo(-3.33, 5);
-})
+});
+
+it("Subtract doesn't work for non numbers", () => {
+  expect(calculator.subtract("a", 1)).toBe("NaN");
+  expect(calculator.subtract(true, 1)).toBe("NaN");
+  expect(calculator.subtract(() => { }, 1)).toBe("NaN");
+  expect(calculator.subtract({ value: 2 }, 1)).toBe("NaN");
+});
