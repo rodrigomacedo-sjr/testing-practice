@@ -16,8 +16,8 @@ it("Deals with special characters", () => {
 })
 
 it("Deals with empty strings", () => {
-  expect(reverse().toBe(""));
-  expect(reverse("").toBe(""));
-  expect(reverse("   ").toBe("   "));
-  expect(reverse("      ").toBe("     "));
+  expect(reverse()).toBe("");
+  expect(reverse("")).toBe("");
+  expect(reverse("   ")).toBe("   ");
+  expect(reverse("      ")).toBe("      ");
 })
