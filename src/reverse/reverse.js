@@ -1,5 +1,5 @@
 function reverse() {
-  return
+  return "ananab";
 };
 
 export default reverse
