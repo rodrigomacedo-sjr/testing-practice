@@ -1,5 +1,10 @@
 const calculator = (() => {
-  const subtract = (a, b) => a - b;
+  const subtract = (a, b) => {
+    if (typeof a != "number" || typeof b != "number") {
+      return "NaN";
+    }
+    return a - b;
+  };
   const divide = () => { };
   const multiply = () => { };
 
