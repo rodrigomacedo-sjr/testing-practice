@@ -10,7 +10,7 @@ it("Calculator has the expected shape", () => {
   expect(typeof calculator.multiply === "function").toBe(true);
 });
 
-it("Subtract works for numbers", () => {
+it("Subtract handles normal numbers", () => {
   expect(calculator.subtract(1, 2)).toBe(-1);
   expect(calculator.subtract(2, 1)).toBe(1);
   expect(calculator.subtract(10000000000, 1)).toBe(9999999999);
@@ -18,14 +18,14 @@ it("Subtract works for numbers", () => {
   expect(calculator.subtract(1.23, 4.56)).toBeCloseTo(-3.33, 5);
 });
 
-it("Subtract doesn't work for non numbers", () => {
+it("Subtract handles non numbers", () => {
   expect(calculator.subtract("a", 1)).toBe("NaN");
   expect(calculator.subtract(true, 1)).toBe("NaN");
   expect(calculator.subtract(() => { }, 1)).toBe("NaN");
   expect(calculator.subtract({ value: 2 }, 1)).toBe("NaN");
 });
 
-it("Divide works for numbers", () => {
+it("Divide handles normal numbers", () => {
   expect(calculator.divide(1, 2)).toBeCloseTo(0.5, 5);
   expect(calculator.divide(2, 1)).toBe(2);
   expect(calculator.divide(1, 10000000000)).toBeCloseTo(0, 5);
@@ -39,4 +39,9 @@ it("Divide handles zero", () => {
   expect(calculator.divide(0.0000000001, 1)).toBeCloseTo(0, 5);
 });
 
-it("D");
+it("Divide handles non numbers", () => {
+  expect(calculator.divide("a", 1)).toBe("NaN");
+  expect(calculator.divide(true, 1)).toBe("NaN");
+  expect(calculator.divide(() => { }, 1)).toBe("NaN");
+  expect(calculator.divide({ value: 2 }, 1)).toBe("NaN");
+});
