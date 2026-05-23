@@ -1,5 +1,5 @@
 const calculator = (() => {
-  const subtract = () => { };
+  const subtract = (a, b) => a - b;
   const divide = () => { };
   const multiply = () => { };
 
