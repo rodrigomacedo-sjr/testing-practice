@@ -1,12 +1,13 @@
 const calculator = (() => {
-  const [subtract, divide, multiply] = [1, 2, 3];
+  const subtract = () => { };
+  const divide = () => { };
+  const multiply = () => { };
 
   return {
     subtract,
     divide,
-    multiply
-  }
-
+    multiply,
+  };
 })();
 
-export default calculator
+export default calculator;
