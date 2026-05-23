@@ -26,4 +26,8 @@ it("Empty string", () => {
 
 it("Big string starting with uppercase", () => {
   expect(capitalize("Big string")).toBe("Big string");
-})
+});
+
+it("Big string starting with lowercase", () => {
+  expect(capitalize("big string")).toBe("Big string");
+});
