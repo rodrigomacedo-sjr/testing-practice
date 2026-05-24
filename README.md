@@ -36,12 +36,15 @@ object == {
 - [ ] analyze array
 
 ## How to run
+[You must have Node.js and npm installed](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/ "Here ya go :)")
+
 
 ### Unix
 
 ```
 git clone git@github.com:rodrigomacedo-sjr/testing-practice.git
 cd testing-practice
+npm install
 npm test
 ```
 
