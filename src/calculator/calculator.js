@@ -1,4 +1,11 @@
 const calculator = (() => {
+  const sum = (a, b) => {
+    if (typeof a != "number" || typeof b != "number") {
+      return "NaN";
+    }
+    return a + b;
+  }
+
   const subtract = (a, b) => {
     if (typeof a != "number" || typeof b != "number") {
       return "NaN";
@@ -10,7 +17,6 @@ const calculator = (() => {
     if (typeof a != "number" || typeof b != "number") {
       return "NaN";
     }
-
     return a / b;
   };
 
@@ -18,11 +24,11 @@ const calculator = (() => {
     if (typeof a != "number" || typeof b != "number") {
       return "NaN";
     }
-
     return a * b;
   };
 
   return {
+    sum,
     subtract,
     divide,
     multiply,
