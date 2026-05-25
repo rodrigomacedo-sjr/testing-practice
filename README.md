@@ -33,7 +33,7 @@ object == {
 - [x] reverse string function
 - [x] calculator object
 - [x] caesar cipher
-- [ ] analyze array
+- [x] analyze array
 
 ## How to run
 [You must have Node.js and npm installed](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/ "Here ya go :)")
