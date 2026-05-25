@@ -31,8 +31,8 @@ object == {
 
 - [x] capitalize function
 - [x] reverse string function
-- [ ] calculator object
-- [ ] caesar cipher
+- [x] calculator object
+- [x] caesar cipher
 - [ ] analyze array
 
 ## How to run
