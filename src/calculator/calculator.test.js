@@ -46,3 +46,24 @@ it("Divide handles non numbers", () => {
   expect(calculator.divide(() => { }, 1)).toBe("NaN");
   expect(calculator.divide({ value: 2 }, 1)).toBe("NaN");
 });
+
+it("Multiply handles normal numbers", () => {
+  expect(calculator.multiply(2, 3)).toBe(6);
+  expect(calculator.multiply(-4, 5)).toBe(-20);
+  expect(calculator.multiply(1.23, 4.56)).toBeCloseTo(5.6088, 5);
+
+})
+
+it("Multiply handles big/small numbers", () => {
+  expect(calculator.multiply(2, 10000000000)).toBe(20000000000);
+  expect(calculator.multiply(2000, 20000000000)).toBe(40000000000000);
+  expect(calculator.multiply(2, 0.00000000001)).toBeCloseTo(0.00000000002, 5);
+  expect(calculator.multiply(0.0002, 0.00000000001)).toBeCloseTo(0.00000000000002, 5);
+})
+
+it("Multiply handles non numbers", () => {
+  expect(calculator.multiply("a", 1)).toBe("NaN");
+  expect(calculator.multiply(true, 1)).toBe("NaN");
+  expect(calculator.multiply(() => { }, 1)).toBe("NaN");
+  expect(calculator.multiply({ value: 2 }, 1)).toBe("NaN");
+})
