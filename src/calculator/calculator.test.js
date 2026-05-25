@@ -55,8 +55,8 @@ it("Multiply handles normal numbers", () => {
 })
 
 it("Multiply handles big/small numbers", () => {
-  expect(calculator.multiply(2, 10000000000)).toBe(200000000000);
-  expect(calculator.multiply(2000, 20000000000)).toBe(400000000000000);
+  expect(calculator.multiply(2, 10000000000)).toBe(20000000000);
+  expect(calculator.multiply(2000, 20000000000)).toBe(40000000000000);
   expect(calculator.multiply(2, 0.00000000001)).toBeCloseTo(0.00000000002, 5);
   expect(calculator.multiply(0.0002, 0.00000000001)).toBeCloseTo(0.00000000000002, 5);
 })
