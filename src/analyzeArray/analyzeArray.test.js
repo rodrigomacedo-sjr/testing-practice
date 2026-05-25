@@ -43,7 +43,7 @@ it("Handles invalid values", () => {
 
 it("Handles empty array", () => {
   expect(analyzeArray([])).toEqual({
-    average: 0,
+    average: "NA",
     min: "NA",
     max: "NA",
     length: 0,
